@@ -21,7 +21,7 @@ The site uses only a server-side read credential. No write credential is needed 
 
 Without HYGRAPH_READ_TOKEN, the site explicitly shows the included 2026-09-05 snapshot. With server runtime bindings configured, it reads the supplied Content API, paginates through all books, and caches successful responses for 60 seconds. The browser refreshes the library once per minute. Failures retain the last successful server cache where available; otherwise the endpoint returns 503. Tokens never reach browser props.
 
-Keychain-to-hosted-runtime transfer was blocked by automatic approval review and requires explicit user approval. Do not work around that restriction. Configure secrets only via Sites, never in hosting.json or source. DRAFT mode must remain owner-private. Before a public launch change to PUBLISHED, review metadata/assets and publish approved records and linked categories/topics/settings in Hygraph.
+The user explicitly approved transferring the read-only Hygraph token to this owner-private Site. It is now configured as a protected runtime secret together with the supplied endpoint and DRAFT stage. The production deployment applied environment revision 1. The exact site GraphQL query was verified against the supplied endpoint and returned all 62 records with no errors. Configure secrets only via Sites, never in hosting.json or source. DRAFT mode must remain owner-private. Before a public launch change to PUBLISHED, review metadata/assets and publish approved records and linked categories/topics/settings in Hygraph.
 
 ## Development
 
@@ -31,5 +31,11 @@ Run npm install, npm run dev, and npm run build. The Sites manifest identifies t
 
 - Verify Amazon credentials and marketplace; fetch accurate product images/edition details.
 - Research missing metadata and summaries for every book, preserving unknowns as unknowns.
-- Approve hosted use of the read-only Hygraph secret and validate live data updates.
+- Confirm end-to-end refresh from a later Hygraph edit in the authenticated hosted preview.
 - Review the private preview and prepare public legal/contact information before public launch.
+
+## Verification
+
+TypeScript check and production build pass. Local /api/library returns 62 books, category counts 9/21/32 and exactly one featured book, Leading Change. All personalNote values are empty. Eight editable topic records are linked to the books. Optional WebMCP search is feature-detected; no supported WebMCP runtime contract test was available, so it is not claimed as verified. Broad browser UI QA was not requested and was not performed.
+
+The Amazon client ID has been provided. The user authorised a connection test, but the exact keychain service Codex Amazon Creators Secret was not found, both with and without an account filter. No Amazon authentication request has yet succeeded or been attempted beyond that missing-keychain preflight.
