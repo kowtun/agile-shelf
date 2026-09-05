@@ -1,0 +1,1997 @@
+[
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/B00K7OWG7O?tag=scifor-21",
+    "amazonAsin": "B00K7OWG7O",
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": "Second Generation Lean Product Development ",
+    "bookTitle": "The Principles of Product Development Flow",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cle8n7zrk4qq00aw7fhumse8a",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 1,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/0136823408?tag=scifor-21",
+    "amazonAsin": "0136823408",
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": "Achieving Business Agility with the Scaled Agile Framework",
+    "bookTitle": "SAFe 5.0 Distilled",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cle8oibp34q6i0aw13jnq0ets",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 2,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Lean & Agile Foundations"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/1942788002?tag=scifor-21",
+    "amazonAsin": "1942788002",
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": "How to Create World-Class Agility, Reliability, & Security in Technology Organizations",
+    "bookTitle": "The Devops Handbook",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cle8opl5g4t7x0aw7yv5ur7s9",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 3,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "DevOps & Delivery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/0071828915?tag=scifor-21",
+    "amazonAsin": "0071828915",
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": "How to Visualize Work and Align Leadership for Organizational Transformation",
+    "bookTitle": "Value Stream Mapping",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cle8orv1q4sx70aw8ukpo6qcu",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 4,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/1942788819?tag=scifor-21",
+    "amazonAsin": "1942788819",
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": "Organizing Business and Technology Teams for Fast Flow",
+    "bookTitle": "Team Topologies",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cle8ouc6l4tj80aw7ezzsee8s",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 5,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      },
+      {
+        "name": "Culture & Teams"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/0321635841?tag=scifor-21",
+    "amazonAsin": "0321635841",
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": "Lean Requirements Practices for Teams, Programs, and the Enterprise (Agile Software Development Series)",
+    "bookTitle": "Agile Software Requirements",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cle8ow0yp4r3r0aw1b2vwtfn9",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 6,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/1422186431?tag=scifor-21",
+    "amazonAsin": "1422186431",
+    "authors": [
+      "John P. Kotter"
+    ],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Leading Change",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": "Explores how leaders can guide organisational change, from establishing urgency and building a guiding coalition to sustaining new ways of working.",
+    "edition": null,
+    "id": "cle8n1vph4qbk0aw7jknwq5to",
+    "isFeatured": true,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 7,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/0814432883?tag=scifor-21",
+    "amazonAsin": "0814432883",
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": "How Harley-Davidson Drove Top-Line Growth and Profitability with Revolutionary Lean Product Development",
+    "bookTitle": "The Lean Machine",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cle8oxr7u4tsa0aw740ckqb5v",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 8,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": "https://www.amazon.de/dp/0998162906?tag=scifor-21",
+    "amazonAsin": "0998162906",
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": "A Novel about Leadership and Building a Lean-Agile Enterprise with SAFe®",
+    "bookTitle": "The Rollout",
+    "category": {
+      "name": "SAFe Core",
+      "slug": "safe-core"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cle8oz4qm4twf0aw71e5gwjkq",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 9,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Agile Coaching",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosoe8idobd07uprt6eft9w",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 10,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Coaching & Learning"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Continuous Delivery",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosoge3dof207upi5sp4saj",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 11,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "DevOps & Delivery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Crossing the Chasm",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosoimocbz607w4f4zs9uyq",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 12,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Drive",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosp4dhdphw07up08uxlx8t",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 13,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Culture & Teams"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Lean Architecture",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosp6pkccv907w4ykdimowo",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 14,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "DevOps & Delivery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Lean Product and Process Development",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosp8yfccxb07w4di8sda4j",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 15,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Lean UX",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtospcjlcd0s07w4d0p42kyg",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 16,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Design & Discovery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Out of the Crisis",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtospezgcd3b07w43u9emfb0",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 17,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Lean & Agile Foundations"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Switch",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosph8zdpsc07upayuynhif",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 18,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Five Dysfunctions of a Team",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtospjbudptd07upceqcoxn6",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 19,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      },
+      {
+        "name": "Culture & Teams"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Goal",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosplnecd8007w47qqn31wq",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 20,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Lean Startup",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtospnzwcd9c07w448k65jg3",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 21,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Phoenix Project",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtospqumcdfy07w4shcd84s0",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 22,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "DevOps & Delivery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Training from the Back of the Room!",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosptf7cdhw07w4dsma6l96",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 23,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Coaching & Learning"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Turn the Ship Around!",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosq8bucdte07w437uo3o94",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 24,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Team of Teams",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosq8bwcdtj07w4tlkat2ir",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 25,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Project to Product",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosq8bycdto07w4tgb5e5w6",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 26,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Accelerate",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqb9pdqja07upojp6log2",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 27,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Art of Avoiding a Train Wreck",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqb9rdqjf07upkflcj11q",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 28,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Lean & Agile Foundations"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Tribal Unity",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqb9tdqjk07upm8iu3maa",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 29,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      },
+      {
+        "name": "Culture & Teams"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Measure What Matters",
+    "category": {
+      "name": "SAFe Elective",
+      "slug": "safe-elective"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqdnwce1r07w4q1svbxk6",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 30,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Startup Way",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqdnyce1w07w4hdo9rd20",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 31,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Cultivating Communities of Practice",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqdo0ce2107w49hea326f",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 32,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Coaching & Learning"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Practical Kanban",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqfrtce3u07w4kp4tgtk2",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 33,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Actionable Agile Metrics for Predictability",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqfrvce3z07w460bpft2q",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 34,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Accelerate: The Science of Lean Software and DevOps",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqfrxce4407w4z6wninjv",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 35,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "DevOps & Delivery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Unlocking Agility",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqs3edqur07upys14fgtx",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 36,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Fearless Organization",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqs3gdquw07upksa2cpn0",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 37,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Culture & Teams"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The 4 Stages of Psychological Safety",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqs3hdqv107upbo59hbee",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 38,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Culture & Teams"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Business Model Generation",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqub6dqwc07upc0liqw31",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 39,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Value Proposition Design",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqub8dqwh07uplynrz1hx",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 40,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Design Thinking Playbook",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqubadqwm07upacchyjw8",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 41,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Design & Discovery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Competing Against Luck",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqwgzdqz607upei907eex",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 42,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Innovator's Dilemma",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqwh1dqzb07up09e2935s",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 43,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Inside the Tornado",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqwh3dqzg07up9l7dzxaj",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 44,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Innovation Games",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqypzdr0407up7299qkh2",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 45,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Design & Discovery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "User Story Mapping",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqyq1dr0907upw3m1pk3i",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 46,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Design & Discovery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Impact Mapping",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosqyq3dr0e07upnr8g2o17",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 47,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Design & Discovery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Reinventing Organizations",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosr175dr2507upjh4mbljj",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 48,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Culture & Teams"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Beyond Entrepreneurship 2.0",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosr177dr2a07upd8lcmyw0",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 49,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Mindset",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosr178dr2f07up438v47c1",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 50,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Coaching & Learning"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Agile Learner",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosre2jdrbg07upsiyzguag",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 51,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Coaching & Learning"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Scrum: The Art of Doing Twice the Work in Half the Time",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosre2ldrbl07up1wbua6j2",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 52,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Lean & Agile Foundations"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Lean from the Trenches",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosre2ndrbq07upwxh01vpu",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 53,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Flow & Kanban"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Comic Agilé",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrgm5ces507w4nad8cavm",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 54,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Coaching & Learning"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Lean Thinking",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrgm7cesa07w45s2xy8od",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 55,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Lean & Agile Foundations"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "The Toyota Way",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrgm9cesf07w4sfy7z6fv",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 56,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Lean & Agile Foundations"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Implementing Lean Software Development",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrjgucetn07w44x164yxa",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 57,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "DevOps & Delivery"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Our Iceberg Is Melting",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrjgwcets07w4k97bkl17",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 58,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "How to Change the World",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrjgycetx07w4qm91fk6i",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 59,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Strategize",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrml9drgr07up1tlyxr2f",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 60,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Product & Strategy"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Management 3.0",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrmlbdrgw07upq5xgbn1a",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 61,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Leadership & Change"
+      }
+    ]
+  },
+  {
+    "amazonAffiliateUrl": null,
+    "amazonAsin": null,
+    "authors": [],
+    "bookFormat": null,
+    "bookLanguage": null,
+    "bookSubtitle": null,
+    "bookTitle": "Lean vs. Agile vs. Design Thinking",
+    "category": {
+      "name": "Other cool stuff",
+      "slug": "other-cool-stuff"
+    },
+    "coverAlt": null,
+    "coverImageUrl": null,
+    "description": null,
+    "edition": null,
+    "id": "cmtosrmlddrh107up3ikfzldp",
+    "isFeatured": false,
+    "isbn10": null,
+    "isbn13": null,
+    "orderId": 62,
+    "pageCount": null,
+    "personalNote": null,
+    "publicationDate": null,
+    "publisher": null,
+    "recommendedFor": null,
+    "topics": [
+      {
+        "name": "Design & Discovery"
+      }
+    ]
+  }
+]
