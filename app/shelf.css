@@ -2,6 +2,14 @@
 .preview-note{background:#e8eef9;color:#354e76;font-size:13px;text-align:center;padding:9px 20px}.connection-note{font-size:12px;color:#65748b;margin-top:15px}
 
 /* Keep the introduction compact so the featured book enters the first viewport. */
+@media(min-width:1100px){
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .grid article{padding:20px}
+  .grid h3{font-size:1.25rem;line-height:1.25;letter-spacing:-.025em;overflow-wrap:anywhere}
+  .card-top{gap:10px;align-items:flex-start}
+  .card-top>span:last-child{flex-shrink:0}
+}
+
 .intro{padding:32px 0 28px;text-align:center}
 .intro .eyebrow{justify-content:center}
 .intro h1{font-size:clamp(3rem,6vw,4.75rem);letter-spacing:-.045em;line-height:1.04;margin:16px 0}
