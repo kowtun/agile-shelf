@@ -1,36 +1,491 @@
 'use client';
-import {useEffect,useMemo,useState} from 'react';
-import {flushSync} from 'react-dom';
-import {BookOpen,ArrowUpRight,Search,Sparkles} from 'lucide-react';
-import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
-import {Select,SelectTrigger,SelectValue,SelectContent,SelectItem} from '@/components/ui/select';
-export type Book={id:string;bookTitle:string;bookSubtitle?:string|null;authors?:string[]|null;description?:string|null;personalNote?:string|null;recommendedFor?:string|null;isbn13?:string|null;isbn10?:string|null;publisher?:string|null;edition?:string|null;publicationDate?:string|null;pageCount?:number|null;bookLanguage?:string|null;bookFormat?:string|null;isFeatured?:boolean|null;orderId?:number|null;amazonAsin?:string|null;amazonAffiliateUrl?:string|null;coverImageUrl?:string|null;coverAlt?:string|null;category?:{name:string;slug?:string|null}|null;topics?:{name:string}[]|null};
-const categoryOf=(b:Book)=>b.category?.name||'Uncategorised';
-export default function Shelf({initialBooks:initial,settings}:{initialBooks:Book[];settings?:{name?:string;introduction?:string;affiliateTag:string;marketplace:string;affiliateDisclosure?:string}}){
-const [initialBooks,setBooks]=useState(initial);
-const [siteSettings,setSiteSettings]=useState(settings);
-const [connectionNote,setConnectionNote]=useState('');
-useEffect(()=>{const timer=setInterval(()=>{fetch('/api/library').then(r=>r.ok?r.json() as Promise<{books?:Book[];settings?:typeof settings;mode?:string}>:null).then(data=>{if(data?.books){setBooks(data.books);if(data.settings)setSiteSettings(data.settings);setConnectionNote(data.mode==='stale'?'Showing the last available data.':data.mode==='preview'?'Private preview · snapshot from Hygraph.':'Live data from Hygraph.');}}).catch(()=>{});},60000);return()=>clearInterval(timer);},[]);
-const [query,Q]=useState(''),[category,C]=useState('All books'),[language,L]=useState('All languages'),[topic,T]=useState('All topics'),[sort,S]=useState('Reading list'),[selected,D]=useState<Book|null>(null);
-const featured=initialBooks.find(b=>b.isFeatured)||initialBooks.find(b=>b.bookTitle==='Leading Change');
-const categories=Array.from(new Set(initialBooks.map(categoryOf)));
-const languages=Array.from(new Set(initialBooks.map(b=>b.bookLanguage).filter(Boolean))) as string[];
-const topics=Array.from(new Set(initialBooks.flatMap(b=>b.topics?.map(t=>t.name)||[]))).sort();
-const visible=useMemo(()=>initialBooks.filter(b=>(category==='All books'||categoryOf(b)===category)&&(language==='All languages'||b.bookLanguage===language)&&(topic==='All topics'||b.topics?.some(t=>t.name===topic))&&[b.bookTitle,b.bookSubtitle,...(b.authors||[]),b.description].filter(Boolean).join(' ').toLowerCase().includes(query.toLowerCase())).sort((a,b)=>sort==='Title A–Z'?a.bookTitle.localeCompare(b.bookTitle):(a.orderId||999)-(b.orderId||999)),[initialBooks,category,language,topic,query,sort]);
-const reset=()=>{Q('');C('All books');L('All languages');T('All topics');};
-useEffect(()=>{
- const context=(document as unknown as {modelContext?:{registerTool:(tool:unknown,options:{signal:AbortSignal})=>void|Promise<void>}}).modelContext;
- if(!context)return;const lifecycle=new AbortController();
- const tool={name:'search_library',description:'Search book titles and authors, reset other filters, and show the matching books.',inputSchema:{type:'object',properties:{query:{type:'string',maxLength:200}},required:['query'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:true},execute:(input:unknown)=>{
-   if(!input||typeof input!=='object'||typeof (input as {query?:unknown}).query!=='string')throw new Error('query must be a string');
-   const q=(input as {query:string}).query;if(q.length>200)throw new Error('query is too long');
-   flushSync(()=>{Q(q);C('All books');L('All languages');T('All topics');});
-   return {books:initialBooks.filter(b=>[b.bookTitle,b.bookSubtitle,...(b.authors||[]),b.description].filter(Boolean).join(' ').toLowerCase().includes(q.toLowerCase())).map(b=>({id:b.id,title:b.bookTitle}))};
- }};
- try{void Promise.resolve(context.registerTool(tool,{signal:lifecycle.signal})).catch(()=>{});}catch{}
- return()=>lifecycle.abort();
-},[initialBooks]);
-function filter(label:string,value:string,options:string[],set:(v:string)=>void){return <Select value={value} onValueChange={v=>v&&set(v)}><SelectTrigger aria-label={label}><SelectValue>{value}</SelectValue></SelectTrigger><SelectContent>{options.map(v=><SelectItem value={v} key={v}>{v}</SelectItem>)}</SelectContent></Select>;}
-function buy(b:Book){const url=b.amazonAsin?`https://${['www.amazon.de','www.amazon.com','www.amazon.co.uk'].includes(siteSettings?.marketplace||'')?siteSettings!.marketplace:'www.amazon.de'}/dp/${encodeURIComponent(b.amazonAsin)}?tag=${encodeURIComponent(siteSettings?.affiliateTag||'scifor-21')}`:b.amazonAffiliateUrl;if(!url||!/^https:\/\/(www\.)?(amazon\.(de|com|co\.uk)|amzn\.to)\//i.test(url))return null;return <a className="buy" href={url} target="_blank" rel="sponsored noopener noreferrer">View on Amazon <ArrowUpRight size={18}/></a>;}
-return <><a className="skip" href="#library">Skip to books</a><header><a className="brand" href="#"><BookOpen/>{siteSettings?.name||'Agile Shelf'}.</a><nav><a href="#library">The library</a><a href="#about">About</a></nav><span>Ideas worth making room for.</span></header><main><section className="intro"><div className="eyebrow">A READING LIST FOR PEOPLE WHO BUILD BETTER</div><h1>Small shelf.<br/><em>Big shifts.</em></h1><p>{siteSettings?.introduction||'Explore the books behind better teams, thoughtful leadership, and lasting change.'}</p><a href="#library" className="text-link">Explore the collection ↓</a></section>{featured&&<section className="spotlight"><div className="eyebrow"><Sparkles size={17}/> IN THE SPOTLIGHT</div><div className="feature-grid"><div><h2>{featured.bookTitle}</h2><p className="author">{featured.authors?.join(', ')||'John P. Kotter'}</p><p>{featured.description||'A starting point for thinking about how organisations change, and how leaders help people move forward together.'}</p><button className="feature-button" onClick={()=>D(featured)}>Explore this book <ArrowUpRight size={18}/></button></div><aside>{featured.coverImageUrl?<img src={featured.coverImageUrl} alt={featured.coverAlt||featured.bookTitle} width={160} height={240}/>:<><BookOpen size={40}/><p>Better change<br/>starts with<br/><em>better questions.</em></p></>}</aside></div></section>}<section id="library"><div className="eyebrow">THE COLLECTION</div><h2>Find your next perspective.</h2><p className="muted">Pick a path. Follow your curiosity.</p><div className="categories">{['All books',...categories].map(c=><button key={c} aria-pressed={category===c} onClick={()=>C(c)}>{c}<small>{c==='All books'?initialBooks.length:initialBooks.filter(b=>categoryOf(b)===c).length}</small></button>)}</div><div className="filters"><label className="search"><Search size={18}/><span className="sr-only">Search books</span><input value={query} onChange={e=>Q(e.target.value)} placeholder="Search titles, authors, or ideas…"/></label>{filter('Topic',topic,['All topics',...topics],T)}{filter('Language',language,['All languages',...languages],L)}{filter('Sort',sort,['Reading list','Title A–Z'],S)}</div><p className="connection-note" role="status">{connectionNote}</p><div className="results" role="status">{visible.length} books on this shelf <button onClick={reset}>Reset filters</button></div><div className="grid">{visible.map((b,i)=><article key={b.id}><div className="card-top"><span>{categoryOf(b)}</span><span>{String(i+1).padStart(2,'0')}</span></div>{b.coverImageUrl&&<img className="cover" src={b.coverImageUrl} alt={b.coverAlt||b.bookTitle} width={120} height={180} loading="lazy"/>}<button className="book-title" onClick={()=>D(b)}><h3>{b.bookTitle}</h3></button>{!!b.authors?.length&&<p className="author">{b.authors.join(', ')}</p>}{b.bookSubtitle&&<p className="subtitle">{b.bookSubtitle}</p>}{b.description&&<p className="summary">{b.description}</p>}<div className="card-bottom"><button onClick={()=>D(b)} aria-label={`Details for ${b.bookTitle}`}>Book details <ArrowUpRight size={16}/></button><span>{b.bookLanguage}</span></div></article>)}</div>{!visible.length&&<div className="empty"><h3>No matching books.</h3><p>Try another search or reset your filters.</p><button onClick={reset}>Show all books</button></div>}</section><section id="about"><div className="eyebrow">ABOUT THE SHELF</div><h2>Good ideas deserve<br/>a place to grow.</h2><p>A growing collection of books about agile ways of working, product development, and the human side of change. Start with the foundations, go deeper, or discover something unexpected.</p></section></main><footer><a className="brand" href="#">agile shelf.</a><p>{siteSettings?.affiliateDisclosure||'As an Amazon Associate I earn from qualifying purchases.'}<br/>Amazon links are affiliate links.</p><span>Stay curious.</span></footer><Dialog open={!!selected} onOpenChange={open=>!open&&D(null)}><DialogContent className="book-dialog">{selected&&<><span className="eyebrow">{categoryOf(selected)}</span><DialogTitle className="dialog-title">{selected.bookTitle}</DialogTitle><DialogDescription>{selected.bookSubtitle||selected.authors?.join(', ')||'Book details'}</DialogDescription>{!!selected.authors?.length&&<p>{selected.authors.join(', ')}</p>}{selected.description&&<p>{selected.description}</p>}<dl>{[['Language',selected.bookLanguage],['Pages',selected.pageCount],['Publisher',selected.publisher],['Edition',selected.edition],['Format',selected.bookFormat],['Published',selected.publicationDate],['ISBN-13',selected.isbn13],['ISBN-10',selected.isbn10]].filter(([,v])=>v).map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>{selected.personalNote&&<section><h3>Why this book matters to me</h3><p>{selected.personalNote}</p></section>}{selected.recommendedFor&&<p>Recommended for: {selected.recommendedFor}</p>}{buy(selected)}</>}</DialogContent></Dialog></>;
+import { useEffect, useMemo, useState } from 'react';
+import { flushSync } from 'react-dom';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BookOpen, ArrowUpRight, Search, Sparkles } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from '@/components/ui/select';
+export type Book = {
+  id: string;
+  slug?: string | null;
+  bookTitle: string;
+  bookSubtitle?: string | null;
+  authors?: string[] | null;
+  description?: string | null;
+  personalNote?: string | null;
+  recommendedFor?: string | null;
+  keyTakeaways?: string[] | null;
+  isbn13?: string | null;
+  isbn10?: string | null;
+  publisher?: string | null;
+  edition?: string | null;
+  publicationDate?: string | null;
+  pageCount?: number | null;
+  bookLanguage?: string | null;
+  bookFormat?: string | null;
+  isFeatured?: boolean | null;
+  orderId?: number | null;
+  amazonAsin?: string | null;
+  amazonAffiliateUrl?: string | null;
+  coverImageUrl?: string | null;
+  coverAlt?: string | null;
+  category?: { name: string; slug?: string | null } | null;
+  topics?: { name: string }[] | null;
+};
+const categoryOf = (b: Book) => b.category?.name || 'Uncategorised';
+export default function Shelf({
+  initialBooks,
+  settings,
+}: {
+  initialBooks: Book[];
+  settings?: {
+    name?: string;
+    introduction?: string;
+    affiliateTag: string;
+    marketplace: string;
+    affiliateDisclosure?: string;
+  };
+}) {
+  const siteSettings = settings;
+  const [query, Q] = useState(''),
+    [category, C] = useState('All books'),
+    [language, L] = useState('All languages'),
+    [topic, T] = useState('All topics'),
+    [sort, S] = useState('Reading list'),
+    [selected, D] = useState<Book | null>(null);
+  const featured =
+    initialBooks.find((b) => b.isFeatured) ||
+    initialBooks.find((b) => b.bookTitle === 'Leading Change');
+  const categories = Array.from(new Set(initialBooks.map(categoryOf)));
+  const languages = Array.from(
+    new Set(initialBooks.map((b) => b.bookLanguage).filter(Boolean)),
+  ) as string[];
+  const topics = Array.from(
+    new Set(initialBooks.flatMap((b) => b.topics?.map((t) => t.name) || [])),
+  ).sort();
+  const visible = useMemo(
+    () =>
+      initialBooks
+        .filter(
+          (b) =>
+            (category === 'All books' || categoryOf(b) === category) &&
+            (language === 'All languages' || b.bookLanguage === language) &&
+            (topic === 'All topics' ||
+              b.topics?.some((t) => t.name === topic)) &&
+            [b.bookTitle, b.bookSubtitle, ...(b.authors || []), b.description]
+              .filter(Boolean)
+              .join(' ')
+              .toLowerCase()
+              .includes(query.toLowerCase()),
+        )
+        .sort((a, b) =>
+          sort === 'Title A–Z'
+            ? a.bookTitle.localeCompare(b.bookTitle)
+            : (a.orderId || 999) - (b.orderId || 999),
+        ),
+    [initialBooks, category, language, topic, query, sort],
+  );
+  const reset = () => {
+    Q('');
+    C('All books');
+    L('All languages');
+    T('All topics');
+  };
+  useEffect(() => {
+    const context = (
+      document as unknown as {
+        modelContext?: {
+          registerTool: (
+            tool: unknown,
+            options: { signal: AbortSignal },
+          ) => void | Promise<void>;
+        };
+      }
+    ).modelContext;
+    if (!context) return;
+    const lifecycle = new AbortController();
+    const tool = {
+      name: 'search_library',
+      description:
+        'Search book titles and authors, reset other filters, and show the matching books.',
+      inputSchema: {
+        type: 'object',
+        properties: { query: { type: 'string', maxLength: 200 } },
+        required: ['query'],
+        additionalProperties: false,
+      },
+      annotations: { readOnlyHint: false, untrustedContentHint: true },
+      execute: (input: unknown) => {
+        if (
+          !input ||
+          typeof input !== 'object' ||
+          typeof (input as { query?: unknown }).query !== 'string'
+        )
+          throw new Error('query must be a string');
+        const q = (input as { query: string }).query;
+        if (q.length > 200) throw new Error('query is too long');
+        flushSync(() => {
+          Q(q);
+          C('All books');
+          L('All languages');
+          T('All topics');
+        });
+        return {
+          books: initialBooks
+            .filter((b) =>
+              [b.bookTitle, b.bookSubtitle, ...(b.authors || []), b.description]
+                .filter(Boolean)
+                .join(' ')
+                .toLowerCase()
+                .includes(q.toLowerCase()),
+            )
+            .map((b) => ({ id: b.id, title: b.bookTitle })),
+        };
+      },
+    };
+    try {
+      void Promise.resolve(
+        context.registerTool(tool, { signal: lifecycle.signal }),
+      ).catch(() => {});
+    } catch {}
+    return () => lifecycle.abort();
+  }, [initialBooks]);
+  function filter(
+    label: string,
+    value: string,
+    options: string[],
+    set: (v: string) => void,
+  ) {
+    return (
+      <Select value={value} onValueChange={(v) => v && set(v)}>
+        <SelectTrigger aria-label={label}>
+          <SelectValue>{value}</SelectValue>
+        </SelectTrigger>
+        <SelectContent>
+          {options.map((v) => (
+            <SelectItem value={v} key={v}>
+              {v}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    );
+  }
+  function buy(b: Book) {
+    const url = b.amazonAsin
+      ? `https://${['www.amazon.de', 'www.amazon.com', 'www.amazon.co.uk'].includes(siteSettings?.marketplace || '') ? siteSettings!.marketplace : 'www.amazon.de'}/dp/${encodeURIComponent(b.amazonAsin)}?tag=${encodeURIComponent(siteSettings?.affiliateTag || 'scifor-21')}`
+      : b.amazonAffiliateUrl;
+    if (
+      !url ||
+      !/^https:\/\/(www\.)?(amazon\.(de|com|co\.uk)|amzn\.to)\//i.test(url)
+    )
+      return null;
+    return (
+      <a
+        className="buy"
+        href={url}
+        target="_blank"
+        rel="sponsored noopener noreferrer"
+      >
+        View on Amazon <ArrowUpRight size={18} />
+      </a>
+    );
+  }
+  return (
+    <>
+      <a className="skip" href="#library">
+        Skip to books
+      </a>
+      <header>
+        <Link className="brand" href="/">
+          <BookOpen />
+          {siteSettings?.name || 'Agile Shelf'}.
+        </Link>
+        <nav>
+          <a href="#library">The library</a>
+          <a href="#about">About</a>
+        </nav>
+        <span>Ideas worth making room for.</span>
+      </header>
+      <main>
+        <section className="intro">
+          <div className="eyebrow">
+            A READING LIST FOR PEOPLE WHO BUILD BETTER
+          </div>
+          <h1>
+            Small shelf.
+            <br />
+            <em>Big shifts.</em>
+          </h1>
+          <p>
+            {siteSettings?.introduction ||
+              'Explore the books behind better teams, thoughtful leadership, and lasting change.'}
+          </p>
+          <a href="#library" className="text-link">
+            Explore the collection ↓
+          </a>
+        </section>
+        {featured && (
+          <section className="spotlight">
+            <div className="eyebrow">
+              <Sparkles size={17} /> IN THE SPOTLIGHT
+            </div>
+            <div className="feature-grid">
+              <div>
+                <h2>{featured.bookTitle}</h2>
+                <p className="author">
+                  {featured.authors?.join(', ') || 'John P. Kotter'}
+                </p>
+                <p>
+                  {featured.description ||
+                    'A starting point for thinking about how organisations change, and how leaders help people move forward together.'}
+                </p>
+                <button className="feature-button" onClick={() => D(featured)}>
+                  Explore this book <ArrowUpRight size={18} />
+                </button>
+              </div>
+              <aside>
+                {featured.coverImageUrl ? (
+                  <Image
+                    src={featured.coverImageUrl}
+                    alt={featured.coverAlt || featured.bookTitle}
+                    width={160}
+                    height={240}
+                    sizes="160px"
+                    priority
+                  />
+                ) : (
+                  <>
+                    <BookOpen size={40} />
+                    <p>
+                      Better change
+                      <br />
+                      starts with
+                      <br />
+                      <em>better questions.</em>
+                    </p>
+                  </>
+                )}
+              </aside>
+            </div>
+          </section>
+        )}
+        <section id="library">
+          <div className="eyebrow">THE COLLECTION</div>
+          <h2>Find your next perspective.</h2>
+          <p className="muted">Pick a path. Follow your curiosity.</p>
+          <div className="categories">
+            {['All books', ...categories].map((c) => (
+              <button
+                key={c}
+                aria-pressed={category === c}
+                onClick={() => C(c)}
+              >
+                {c}
+                <small>
+                  {c === 'All books'
+                    ? initialBooks.length
+                    : initialBooks.filter((b) => categoryOf(b) === c).length}
+                </small>
+              </button>
+            ))}
+          </div>
+          <div className="filters">
+            <label className="search">
+              <Search size={18} />
+              <span className="sr-only">Search books</span>
+              <input
+                value={query}
+                onChange={(e) => Q(e.target.value)}
+                placeholder="Search titles, authors, or ideas…"
+              />
+            </label>
+            {filter('Topic', topic, ['All topics', ...topics], T)}
+            {filter('Language', language, ['All languages', ...languages], L)}
+            {filter('Sort', sort, ['Reading list', 'Title A–Z'], S)}
+          </div>
+          <div className="results">
+            <span aria-live="polite">{visible.length} books on this shelf</span>
+            <button onClick={reset}>Reset filters</button>
+          </div>
+          <div className="grid">
+            {visible.map((b, i) => (
+              <article key={b.id} id={`book-${b.slug || b.id}`}>
+                <div className="card-top">
+                  <span>{categoryOf(b)}</span>
+                  <span>{String(i + 1).padStart(2, '0')}</span>
+                </div>
+                {b.coverImageUrl && (
+                  <button
+                    className="cover-button"
+                    onClick={() => D(b)}
+                    aria-label={`Open details for ${b.bookTitle}`}
+                  >
+                    <Image
+                      className="cover"
+                      src={b.coverImageUrl}
+                      alt={b.coverAlt || b.bookTitle}
+                      width={120}
+                      height={180}
+                      sizes="120px"
+                      loading="lazy"
+                    />
+                  </button>
+                )}
+                <button className="book-title" onClick={() => D(b)}>
+                  <h3>{b.bookTitle}</h3>
+                </button>
+                {!!b.authors?.length && (
+                  <p className="author">{b.authors.join(', ')}</p>
+                )}
+                {b.bookSubtitle && <p className="subtitle">{b.bookSubtitle}</p>}
+                {b.description && <p className="summary">{b.description}</p>}
+                <div className="card-bottom">
+                  <button
+                    onClick={() => D(b)}
+                    aria-label={`Details for ${b.bookTitle}`}
+                  >
+                    Book details <ArrowUpRight size={16} />
+                  </button>
+                  <span>{b.bookLanguage}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+          {!visible.length && (
+            <div className="empty">
+              <h3>No matching books.</h3>
+              <p>Try another search or reset your filters.</p>
+              <button onClick={reset}>Show all books</button>
+            </div>
+          )}
+        </section>
+        <section id="about">
+          <div className="eyebrow">ABOUT THE SHELF</div>
+          <h2>
+            Good ideas deserve
+            <br />a place to grow.
+          </h2>
+          <p>
+            A growing collection of books about agile ways of working, product
+            development, and the human side of change. Start with the
+            foundations, go deeper, or discover something unexpected.
+          </p>
+        </section>
+      </main>
+      <footer>
+        <Link className="brand" href="/">
+          agile shelf.
+        </Link>
+        <p>
+          {siteSettings?.affiliateDisclosure ||
+            'As an Amazon Associate I earn from qualifying purchases.'}
+          <br />
+          Amazon links are affiliate links.
+        </p>
+        <span>Stay curious.</span>
+      </footer>
+      <Dialog open={!!selected} onOpenChange={(open) => !open && D(null)}>
+        <DialogContent className="book-dialog">
+          {selected && (
+            <div className="dialog-layout">
+              <div className="dialog-visual">
+                {selected.coverImageUrl ? (
+                  <Image
+                    src={selected.coverImageUrl}
+                    alt={selected.coverAlt || selected.bookTitle}
+                    width={240}
+                    height={360}
+                    sizes="(max-width: 600px) calc(100vw - 88px), 240px"
+                  />
+                ) : (
+                  <BookOpen size={48} aria-hidden="true" />
+                )}
+              </div>
+              <div className="dialog-content">
+                <span className="eyebrow">{categoryOf(selected)}</span>
+                <DialogTitle className="dialog-title">
+                  {selected.bookTitle}
+                </DialogTitle>
+                <DialogDescription className="dialog-subtitle">
+                  {selected.bookSubtitle ||
+                    selected.authors?.join(', ') ||
+                    'Book details from the Agile Shelf collection'}
+                </DialogDescription>
+                {!!selected.authors?.length && selected.bookSubtitle && (
+                  <p className="dialog-authors">
+                    {selected.authors.join(', ')}
+                  </p>
+                )}
+                {selected.description && (
+                  <p className="dialog-description">{selected.description}</p>
+                )}
+                {!!selected.topics?.length && (
+                  <div className="topic-list" aria-label="Topics">
+                    {selected.topics.map((item) => (
+                      <span key={item.name}>{item.name}</span>
+                    ))}
+                  </div>
+                )}
+                <dl>
+                  {[
+                    ['Language', selected.bookLanguage],
+                    ['Pages', selected.pageCount],
+                    ['Publisher', selected.publisher],
+                    ['Edition', selected.edition],
+                    ['Format', selected.bookFormat],
+                    ['Published', selected.publicationDate],
+                    ['ISBN-13', selected.isbn13],
+                    ['ISBN-10', selected.isbn10],
+                  ]
+                    .filter(([, v]) => v)
+                    .map(([k, v]) => (
+                      <div key={k}>
+                        <dt>{k}</dt>
+                        <dd>{v}</dd>
+                      </div>
+                    ))}
+                </dl>
+                {selected.personalNote && (
+                  <section className="personal-note">
+                    <h3>Why this book matters to me</h3>
+                    <p>{selected.personalNote}</p>
+                  </section>
+                )}
+                {!!selected.keyTakeaways?.length && (
+                  <section className="takeaways">
+                    <h3>Key takeaways</h3>
+                    <ul>
+                      {selected.keyTakeaways.map((takeaway) => (
+                        <li key={takeaway}>{takeaway}</li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+                {selected.recommendedFor && (
+                  <p className="recommended">
+                    <strong>Recommended for</strong>
+                    {selected.recommendedFor}
+                  </p>
+                )}
+                {buy(selected)}
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+    </>
+  );
 }
