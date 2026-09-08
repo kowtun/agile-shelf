@@ -320,7 +320,7 @@ export default function Shelf({
             <span aria-live="polite">{visible.length} books on this shelf</span>
             <button onClick={reset}>Reset filters</button>
           </div>
-          <div className="grid">
+          <div className="book-grid">
             {visible.map((b, i) => (
               <article key={b.id} id={`book-${b.slug || b.id}`}>
                 <div className="card-top">

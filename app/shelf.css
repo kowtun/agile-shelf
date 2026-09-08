@@ -263,12 +263,12 @@ h1 em {
   text-decoration: underline;
   color: #174cdb;
 }
-.grid {
+.book-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
-.grid article {
+.book-grid article {
   background: white;
   border: 1px solid #dce3ed;
   border-radius: 10px;
@@ -282,7 +282,7 @@ h1 em {
   content-visibility: auto;
   contain-intrinsic-size: 420px;
 }
-.grid article:hover {
+.book-grid article:hover {
   transform: translateY(-3px);
   border-color: #809bc7;
 }
@@ -299,7 +299,7 @@ h1 em {
 .book-title {
   text-align: left;
 }
-.grid h3 {
+.book-grid h3 {
   font-size: 23px;
   line-height: 1.2;
   font-weight: 600;
@@ -386,7 +386,8 @@ footer > span {
   line-height: 1.7;
 }
 .book-dialog {
-  max-width: 880px !important;
+  width: min(1080px, calc(100vw - 32px)) !important;
+  max-width: none !important;
   max-height: 85vh;
   overflow: auto;
   padding: 34px !important;
@@ -399,9 +400,11 @@ footer > span {
 }
 .dialog-layout {
   display: grid;
-  grid-template-columns: minmax(190px, 250px) minmax(0, 1fr);
+  grid-template-columns: minmax(210px, 260px) minmax(0, 1fr);
   gap: 38px;
   align-items: start;
+  width: 100%;
+  min-width: 0;
 }
 .dialog-visual {
   min-height: 330px;
@@ -421,6 +424,7 @@ footer > span {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-width: 0;
 }
 .dialog-subtitle,
 .dialog-authors,
@@ -530,7 +534,7 @@ footer > span {
     padding-left: 28px;
     padding-right: 28px;
   }
-  .grid {
+  .book-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .feature-grid {
@@ -544,6 +548,25 @@ footer > span {
   }
   .feature-grid aside p {
     font-size: 25px;
+  }
+  .book-dialog {
+    width: min(720px, calc(100vw - 32px)) !important;
+  }
+  .dialog-layout {
+    grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+    gap: 28px;
+  }
+}
+@media (max-width: 720px) {
+  .dialog-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .dialog-visual {
+    min-height: 250px;
+  }
+  .dialog-visual img {
+    max-height: 280px;
   }
 }
 @media (max-width: 600px) {
@@ -591,28 +614,18 @@ footer > span {
   #library > h2 {
     font-size: 30px;
   }
-  .grid {
+  .book-grid {
     grid-template-columns: 1fr;
   }
   .categories button {
     font-size: 12px;
     padding: 9px 11px;
   }
-  .grid article {
+  .book-grid article {
     min-height: 240px;
   }
   .book-dialog {
     padding: 26px 22px !important;
-  }
-  .dialog-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .dialog-visual {
-    min-height: 250px;
-  }
-  .dialog-visual img {
-    max-height: 280px;
   }
   #about {
     grid-template-columns: 1fr;
@@ -647,13 +660,13 @@ footer > span {
 }
 /* Keep the introduction compact so the featured book enters the first viewport. */
 @media (min-width: 1100px) {
-  .grid {
+  .book-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .grid article {
+  .book-grid article {
     padding: 20px;
   }
-  .grid h3 {
+  .book-grid h3 {
     font-size: 1.25rem;
     line-height: 1.25;
     letter-spacing: -0.025em;
