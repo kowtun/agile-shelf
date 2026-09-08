@@ -386,6 +386,7 @@ footer > span {
   line-height: 1.7;
 }
 .book-dialog {
+  display: block !important;
   width: min(1080px, calc(100vw - 32px)) !important;
   max-width: none !important;
   max-height: 85vh;
