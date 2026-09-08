@@ -19,6 +19,47 @@ const verifiedIsbns = new Map(
   }),
 );
 
+// Edition identifiers recovered from the official publisher/product sources
+// already attached to the Hygraph records. These are not inferred from title
+// search results; each value is visible in a product URL, cover URL, or the
+// existing print ASIN. They still require an exact Open Library ISBN response
+// before any metadata is considered importable.
+const editionHints = new Map(
+  Object.entries({
+    'SAFe 5.0 Distilled': '9780136823407',
+    'The Devops Handbook': '1942788002',
+    'Value Stream Mapping': '0071828915',
+    'Team Topologies': '1942788819',
+    'Agile Software Requirements': '9780321635846',
+    'Leading Change': '1422186431',
+    'The Lean Machine': '9780814432884',
+    'The Rollout': '0998162906',
+    'Continuous Delivery': '9780321601919',
+    'Crossing the Chasm': '9780062292988',
+    'Lean Architecture': '9780470684207',
+    'Out of the Crisis': '9780262541152',
+    Switch: '9780385528757',
+    'The Lean Startup': '9780307887894',
+    'Training from the Back of the Room!': '9780470472170',
+    'Team of Teams': '9781591847489',
+    'Measure What Matters': '9780525536222',
+    'The Startup Way': '9781101903209',
+    'Practical Kanban': '1620556135',
+    'Unlocking Agility': '9780134542843',
+    'The Design Thinking Playbook': '9781119467472',
+    'Innovation Games': '9780321437297',
+    'User Story Mapping': '9781491904893',
+    'Beyond Entrepreneurship 2.0': '9780399564239',
+    Mindset: '9780345472328',
+    'Scrum: The Art of Doing Twice the Work in Half the Time': '9780385346450',
+    'Lean Thinking': '9780743249270',
+    'The Toyota Way': '0071392319',
+    'Implementing Lean Software Development': '9780321437389',
+    'Our Iceberg Is Melting': '9780399563911',
+    'Management 3.0': '9780321712479',
+  }),
+);
+
 const contact = process.env.OPENLIBRARY_CONTACT?.trim();
 const userAgent = contact
   ? `AgileShelfMetadataAudit/1.0 (${contact})`
@@ -138,7 +179,11 @@ const results = [];
 
 for (let index = 0; index < books.length; index += 1) {
   const book = books[index];
-  const isbn = book.isbn13 || book.isbn10 || verifiedIsbns.get(book.bookTitle);
+  const isbn =
+    book.isbn13 ||
+    book.isbn10 ||
+    verifiedIsbns.get(book.bookTitle) ||
+    editionHints.get(book.bookTitle);
   let result;
 
   try {
