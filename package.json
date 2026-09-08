@@ -11,7 +11,8 @@
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",
-    "enrich:openlibrary": "node scripts/openlibrary-enrichment.mjs"
+    "enrich:openlibrary": "node scripts/openlibrary-enrichment.mjs",
+    "enrich:google-books": "node scripts/google-books-enrichment.mjs"
   },
   "dependencies": {
     "react": "19.2.6",
