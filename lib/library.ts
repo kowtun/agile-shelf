@@ -1,4 +1,4 @@
-import { env } from 'cloudflare:workers';
+import 'server-only';
 import snapshot from './catalog-preview.json';
 import type { Book } from '@/app/shelf';
 
@@ -21,8 +21,10 @@ let cached: { expires: number; value: Library } | undefined;
 const fields =
   'id slug bookTitle bookSubtitle authors description personalNote recommendedFor keyTakeaways isbn13 isbn10 publisher edition publicationDate pageCount bookLanguage bookFormat isFeatured orderId amazonAsin amazonAffiliateUrl coverImageUrl coverAlt coverAsset{url} category{name slug} topics{name}';
 export async function getLibrary(): Promise<Library> {
-  const bindings = env as unknown as Record<string, string | undefined>;
+  const bindings = process.env;
   const token = bindings.HYGRAPH_READ_TOKEN;
+  if (!token && process.env.NODE_ENV === 'production')
+    throw new Error('Hygraph read token is required in production.');
   if (!token)
     return {
       books: snapshot,
@@ -34,7 +36,7 @@ export async function getLibrary(): Promise<Library> {
   const endpoint = bindings.HYGRAPH_ENDPOINT;
   if (!endpoint || !/^https:\/\/[^/]+\.hygraph\.com\/content\//.test(endpoint))
     throw new Error('Hygraph endpoint is not configured.');
-  const stage = bindings.HYGRAPH_STAGE === 'DRAFT' ? 'DRAFT' : 'PUBLISHED';
+  const stage = 'PUBLISHED';
   try {
     let after: string | null = null;
     const books: Book[] = [];
@@ -42,6 +44,7 @@ export async function getLibrary(): Promise<Library> {
     do {
       const query = `query Library($after:String){booksConnection(first:100,after:$after,stage:${stage},orderBy:orderId_ASC){edges{node{${fields}}}pageInfo{hasNextPage endCursor}} librarySettingsEntries(first:1,stage:${stage}){name introduction affiliateTag marketplace affiliateDisclosure}}`;
       const response = await fetch(endpoint, {
+        cache: 'no-store',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,5 +1,13 @@
 # Agile Shelf
 
+## Vercel migration
+
+The current branch runs on Next.js for Vercel. See [VERCEL-SETUP.md](VERCEL-SETUP.md)
+for deployment settings and DNS setup. Production always reads PUBLISHED
+Hygraph content and requires a server-side read token. The development-only
+snapshot is never a production fallback. The notes below describe the original
+private Sites MVP and its historical editorial status, not current hosting.
+
 English book-library MVP backed by Hygraph. The supplied books.pdf contains 62 books: 9 SAFe Core, 21 SAFe Elective, 32 Other cool stuff.
 
 ## Current editorial status

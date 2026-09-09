@@ -1,7 +1,9 @@
 import Shelf from './shelf';
 import { getLibrary } from '@/lib/library';
 
-const siteUrl = 'https://agile-shelf.business-app-8904.chatgpt.site';
+import { siteUrl } from '@/lib/site';
+
+export const dynamic = 'force-dynamic';
 
 function structuredData(
   books: Awaited<ReturnType<typeof getLibrary>>['books'],
@@ -60,13 +62,13 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd }}
       />
-      <div className="preview-note">
+      {library.mode !== 'live' && <div className="preview-note">
         {library.mode === 'preview'
           ? 'Private MVP preview · Hygraph snapshot · Amazon covers and edition details are being completed.'
           : library.mode === 'stale'
             ? 'Showing the last available library data.'
             : 'Connected to Hygraph'}
-      </div>
+      </div>}
       <Shelf initialBooks={library.books} settings={library.settings} />
     </>
   );

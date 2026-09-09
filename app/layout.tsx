@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Geist } from 'next/font/google';
 import './globals.css';
 
-const siteUrl = 'https://agile-shelf.business-app-8904.chatgpt.site';
+import { siteUrl, allowIndexing } from '@/lib/site';
 const title = 'Agile Shelf — Ideas worth making room for';
 const description =
   'A curated reading library for agile teams, thoughtful leaders, and people making lasting change.';
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
   },
   robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
+    index: allowIndexing,
+    follow: allowIndexing,
+    googleBot: { index: allowIndexing, follow: allowIndexing },
   },
 };
 
