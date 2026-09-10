@@ -19,7 +19,7 @@ export type Library = {
 };
 let cached: { expires: number; value: Library } | undefined;
 const fields =
-  'id slug bookTitle bookSubtitle authors description personalNote recommendedFor keyTakeaways isbn13 isbn10 publisher edition publicationDate pageCount bookLanguage bookFormat isFeatured orderId amazonAsin amazonAffiliateUrl coverImageUrl coverAlt coverAsset{url} category{name slug} topics{name}';
+  'id slug bookTitle bookSubtitle authors authorProfiles{fullName slug} description personalNote recommendedFor keyTakeaways isbn13 isbn10 publisher edition publicationDate pageCount bookLanguage bookFormat isFeatured orderId amazonAsin amazonAffiliateUrl coverImageUrl coverAlt coverAsset{url} category{name slug} topics{name}';
 export async function getLibrary(): Promise<Library> {
   const bindings = process.env;
   const token = bindings.HYGRAPH_READ_TOKEN;
@@ -58,7 +58,12 @@ export async function getLibrary(): Promise<Library> {
         errors?: unknown[];
         data?: {
           booksConnection: {
-            edges: { node: Book & { coverAsset?: { url: string } | null } }[];
+            edges: {
+              node: Book & {
+                authorProfiles?: { fullName: string; slug: string }[] | null;
+                coverAsset?: { url: string } | null;
+              };
+            }[];
             pageInfo: { hasNextPage: boolean; endCursor: string };
           };
           librarySettingsEntries: Partial<typeof defaultSettings>[];
@@ -69,6 +74,9 @@ export async function getLibrary(): Promise<Library> {
       for (const { node } of result.data.booksConnection.edges)
         books.push({
           ...node,
+          authors: node.authorProfiles?.length
+            ? node.authorProfiles.map(({ fullName }) => fullName)
+            : node.authors,
           coverImageUrl: node.coverImageUrl || node.coverAsset?.url,
         });
       settings = {
